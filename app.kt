@@ -53,4 +53,42 @@ fun main() {
     myData = 10
     
     println(myData)
+    
+    var numbers = arrayOf(1, 2, 3, 4)
+    
+    println(numbers)
+  	println(numbers[0])
+    println(numbers[1])
+    println(numbers[2])
+    println(numbers[3])
+    println(numbers.isEmpty())
+    println(numbers.count())
+    
+    var cities = arrayOf(city, "Blumenau", "Gaspar")
+    
+    println(cities)
+    println(cities[0])
+    println(cities[1])
+    println(cities[2])
+    println(cities.isEmpty())
+    println(cities.count())
+    
+    var names = ArrayList<String>()
+    
+    println(names)
+    println(names.isEmpty())
+    println(names.count())
+    
+    names.add("Deborah")
+    names.add("João")
+    
+    println(names)
+    println(names[0])
+    println(names[1])
+    println(names.isEmpty())
+    println(names.count())
+
+    names[1] = "João Paulo"
+    
+    println(names[1])
 }
