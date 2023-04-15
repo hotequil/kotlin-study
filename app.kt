@@ -91,4 +91,40 @@ fun main() {
     names[1] = "João Paulo"
     
     println(names[1])
+    
+    var languages = HashSet<String>()
+    
+    languages.add("Kotlin")
+    languages.add("JavaScript")
+    languages.add("Kotlin")
+    languages.add("JavaScript")
+    
+    println(languages)
+    println(languages.count())
+    println(languages.contains("Kotlin"))
+    println(languages.contains("JavaScript"))
+    println(languages.contains("Rust"))
+    
+    var fruits = HashMap<Int, String>()
+    var fruitsList = mapOf(Pair(12, "Banana"), Pair(18, "Kiwi"))
+    
+    fruits.putAll(fruitsList)
+    fruits.put(6, "Melon")
+    
+    println(fruits)
+    println(fruits.count())
+    println(fruits.isEmpty())
+    
+    fruits.remove(12)
+    fruits.remove(6)
+    
+    println(fruits)
+    println(fruits.count())
+    println(fruits.isEmpty())
+    
+    fruits.remove(18)
+    
+    println(fruits)
+    println(fruits.count())
+    println(fruits.isEmpty())
 }
