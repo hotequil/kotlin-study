@@ -151,4 +151,27 @@ fun main() {
     var secondNumber: Int = firstNumber ?: 0
     
     println(secondNumber)
+    
+    for(firstIndex in 1..3) println("First index is $firstIndex")    
+    for(secondIndex in 0 until 5) println("Second index is $secondIndex")
+    
+    val values = ArrayList<Int>()
+    
+    values.add(20)
+    values.add(5)
+    values.add(10)
+    values.add(25)
+    values.add(15)    
+    
+    for(value in values) println("Value is $value")
+    
+    var counter = 0
+    val limit = 10
+    
+    while(counter < limit){
+        println("Counter is $counter, it's smaller than $limit")
+        counter++
+    }
+    
+    println("Counter is $counter, it's equal to $limit")
 }
