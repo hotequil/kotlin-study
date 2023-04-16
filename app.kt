@@ -9,6 +9,12 @@ enum class LifeStatus(val status: String){
     DEAD("Dead")
 }
 
+class User constructor(val name: String, val email: String){   
+    fun getInfo(): String{
+        return "$name ($email)"
+    }
+}
+
 fun calculateImc(weight: Double, height: Double): String {
     return "Your IMC is ${String.format("%.2f", weight / (height * height))}"
 }
@@ -215,4 +221,11 @@ fun main() {
    	println(someEvenNumbers)
     println(sumOfSomeNumbers)
     println(someDoubleNumbers)
+    
+    val user = User("João Paulo Hotequil", "joaohotequil@gmail.com")
+    
+    println(user)
+    println(user.name)
+    println(user.email)
+    println(user.getInfo())
 }
