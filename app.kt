@@ -1,3 +1,14 @@
+enum class PaymentStatus{
+	WAITING_PAYMENT,
+    NOT_PAID,
+    PAID
+}
+
+enum class LifeStatus(val status: String){
+    LIVE("Live"),
+    DEAD("Dead")
+}
+
 fun main() {
     var age = 20
     
@@ -174,4 +185,17 @@ fun main() {
     }
     
     println("Counter is $counter, it's equal to $limit")
+    
+    val paymentStatus = PaymentStatus.PAID
+    
+    when(paymentStatus){
+        PaymentStatus.WAITING_PAYMENT -> println("Waiting payment")
+        PaymentStatus.NOT_PAID -> println("Not paid")
+        PaymentStatus.PAID -> println("Paid")
+    }
+    
+    println(LifeStatus.LIVE)
+    println(LifeStatus.DEAD)    
+    println(LifeStatus.LIVE.status)
+    println(LifeStatus.DEAD.status)
 }
