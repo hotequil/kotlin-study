@@ -7,6 +7,12 @@ fun main() {
     
     println(age)
     
+    if(age >= 18){
+        println("You can buy a fire gun")
+    } else{
+        println("You can't buy a fire gun")
+    }
+    
     val productPrice = 50.9
     val city = "Pomerode"
     
@@ -127,4 +133,22 @@ fun main() {
     println(fruits)
     println(fruits.count())
     println(fruits.isEmpty())
+    
+    val carPrice = 8000
+    
+    if(carPrice >= 10000) println("Your car is expensive")
+    else if(carPrice >= 5000) println("Your car has good price")
+    else println("Your car is cheap")
+    
+    val favoriteNumber = 7
+    
+    when(favoriteNumber % 2){
+        0 -> println("Your favorite number is even")
+        1 -> println("Your favorite number is odd")
+    }
+    
+    var firstNumber: Int? = null
+    var secondNumber: Int = firstNumber ?: 0
+    
+    println(secondNumber)
 }
