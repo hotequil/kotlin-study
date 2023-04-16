@@ -9,6 +9,10 @@ enum class LifeStatus(val status: String){
     DEAD("Dead")
 }
 
+fun calculateImc(weight: Double, height: Double): String {
+    return "Your IMC is ${String.format("%.2f", weight / (height * height))}"
+}
+
 fun main() {
     var age = 20
     
@@ -196,6 +200,9 @@ fun main() {
     
     println(LifeStatus.LIVE)
     println(LifeStatus.DEAD)    
+    
     println(LifeStatus.LIVE.status)
     println(LifeStatus.DEAD.status)
+    
+    println(calculateImc(78.5, 1.8))
 }
