@@ -205,4 +205,14 @@ fun main() {
     println(LifeStatus.DEAD.status)
     
     println(calculateImc(78.5, 1.8))
+    
+    val someNumbers = listOf(1, 2, 3, 4, 5, 6)
+    val someEvenNumbers = someNumbers.filter{it % 2 == 0}
+    val sumOfSomeNumbers = someNumbers.reduce{accumulator, it -> accumulator + it}
+    val someDoubleNumbers = someNumbers.map{it * 2}
+    
+    println(someNumbers)
+   	println(someEvenNumbers)
+    println(sumOfSomeNumbers)
+    println(someDoubleNumbers)
 }
