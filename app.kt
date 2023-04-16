@@ -9,9 +9,15 @@ enum class LifeStatus(val status: String){
     DEAD("Dead")
 }
 
-class User constructor(val name: String, val email: String){   
+open class User(val name: String, val email: String){   
     fun getInfo(): String{
         return "$name ($email)"
+    }
+}
+
+class Funcionary(val role: String, name: String, email: String) : User(name, email){
+    fun getData(): String{
+        return "$name is $role and it email is $email"
     }
 }
 
@@ -228,4 +234,13 @@ fun main() {
     println(user.name)
     println(user.email)
     println(user.getInfo())
+    
+    val funcionary = Funcionary("Software developer", "Deborah G. Hoepers", "deborah@hoepers.com")
+    
+    println(funcionary)
+    println(funcionary.name)
+    println(funcionary.email)
+    println(funcionary.role)
+    println(funcionary.getInfo())
+    println(funcionary.getData())
 }
