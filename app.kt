@@ -71,7 +71,7 @@ fun main() {
     println(surname.lowercase())
     
     var gender: Char = 'M'
-    
+       
     println(gender)
     
     var (address, number) = Pair("Street", 150)
@@ -171,7 +171,7 @@ fun main() {
     
     when(favoriteNumber % 2){
         0 -> println("Your favorite number is even")
-        1 -> println("Your favorite number is odd")
+        else -> println("Your favorite number is odd")
     }
     
     var firstNumber: Int? = null
