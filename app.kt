@@ -25,7 +25,9 @@ fun calculateImc(weight: Double, height: Double): String {
     return "Your IMC is ${String.format("%.2f", weight / (height * height))}"
 }
 
-fun main() {
+fun main(args: Array<String>) {    
+    println(args)
+    
     var age = 20
     
     println(age)
