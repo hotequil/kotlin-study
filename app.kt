@@ -210,11 +210,15 @@ fun main() {
         PaymentStatus.PAID -> println("Paid")
     }
     
+    PaymentStatus.values().forEach{println("Payment status is $it")}
+    
     println(LifeStatus.LIVE)
     println(LifeStatus.DEAD)    
     
     println(LifeStatus.LIVE.status)
     println(LifeStatus.DEAD.status)
+    
+    LifeStatus.values().forEach{println("Life status is ${it.status}")}
     
     println(calculateImc(78.5, 1.8))
     
