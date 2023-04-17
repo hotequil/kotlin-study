@@ -10,7 +10,7 @@ enum class LifeStatus(val status: String){
 }
 
 open class User(val name: String, val email: String, val age: Short = 0){   
-    fun getInfo(): String{
+    open fun getInfo(): String{
         return "$name ($email)"
     }
     
@@ -22,6 +22,10 @@ open class User(val name: String, val email: String, val age: Short = 0){
 class Funcionary(val role: String, name: String, email: String, age: Short) : User(name, email, age){
     fun getData(): String{
         return "$name is $role and it email is $email"
+    }
+    
+    override fun getInfo(): String{
+        return "Info: ${super.getInfo()}"
     }
     
     val contact: String get(){
