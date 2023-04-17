@@ -276,4 +276,8 @@ fun main() {
 
         println("Attempt is: $tries")
     } while(tries < 5)
+    
+    fun sayHello() = println("Hello")
+    
+    sayHello()
 }
