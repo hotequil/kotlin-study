@@ -171,7 +171,7 @@ fun main() {
     
     when(favoriteNumber % 2){
         0 -> println("Your favorite number is even")
-        else -> println("Your favorite number is odd")
+        1 -> println("Your favorite number is odd")
     }
     
     var firstNumber: Int? = null
@@ -243,4 +243,33 @@ fun main() {
     println(funcionary.role)
     println(funcionary.getInfo())
     println(funcionary.getData())
+    
+    val letter = "j"
+    
+    when(letter){
+        "a", "e", "i", "o", "u" -> println("Vowel")
+        else -> println("Consonant")
+    }
+    
+    when(letter){
+        in "a".."f" -> println("First group")
+        in "g".."l" -> println("Second group")
+        in "m".."r" -> println("Third group")
+        else -> println("Fourth group")
+    }
+    
+    val speed = 40
+    
+    when(speed){
+        in 0 until 81 -> println("Speed is ok")
+        else -> println("Speed has exceeded limit")
+    }
+    
+    var tries = 0
+    
+    do {
+        tries += 1
+
+        println("Attempt is: $tries")
+    } while(tries < 5)
 }
