@@ -23,6 +23,16 @@ class Funcionary(val role: String, name: String, email: String, age: Short) : Us
     fun getData(): String{
         return "$name is $role and it email is $email"
     }
+    
+    val contact: String get(){
+        return "My contact is $email ($role)"
+    }
+    
+    companion object{
+        fun whoYouInstance(): String{
+            return "A funcionary"
+        }
+    }
 }
 
 fun calculateImc(weight: Double, height: Double): String {
@@ -254,9 +264,11 @@ fun main(args: Array<String>) {
     println(funcionary.email)
     println(funcionary.role)
     println(funcionary.age)
+    println(funcionary.contact)
     println(funcionary.getInfo())
     println(funcionary.getData())
     println(funcionary.getYears())
+    println(Funcionary.whoYouInstance())
     
     val letter = "j"
     
